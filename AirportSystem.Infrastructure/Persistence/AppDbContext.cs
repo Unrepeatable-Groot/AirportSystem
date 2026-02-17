@@ -62,13 +62,13 @@ public class AppDbContext : DbContext
             var passwordHasher = new PasswordHasher<Users>();
             var adminUser = new Users
             {
-                Id = 1,
+                Id = 2,
                 FirstName = "George",
                 LastName = "Doe",
                 Email = "georgedoe123@gmail.com",
                 Role = UserRole.Owner,
-                PhoneNumber = "00000000000",
-                PersonalId = "555555555",
+                PhoneNumber = "555555555",
+                PersonalId = "00000000000",
                 Age = 30
             };
             adminUser.Password = passwordHasher.HashPassword(adminUser, "georgedoe123!");
