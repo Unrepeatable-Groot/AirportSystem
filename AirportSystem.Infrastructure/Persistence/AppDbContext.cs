@@ -63,15 +63,15 @@ public class AppDbContext : DbContext
             var adminUser = new Users
             {
                 Id = 1,
-                FirstName = "Name",
-                LastName = "Lastname",
-                Email = "owner123@example.com",
+                FirstName = "George",
+                LastName = "Doe",
+                Email = "georgedoe123@gmail.com",
                 Role = UserRole.Owner,
                 PhoneNumber = "00000000000",
                 PersonalId = "555555555",
                 Age = 30
             };
-            adminUser.Password = passwordHasher.HashPassword(adminUser, "Owner123!");
+            adminUser.Password = passwordHasher.HashPassword(adminUser, "georgedoe123!");
 
             entity.HasData(adminUser);
         });
