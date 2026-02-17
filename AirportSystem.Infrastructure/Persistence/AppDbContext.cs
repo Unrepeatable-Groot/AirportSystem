@@ -66,7 +66,7 @@ public class AppDbContext : DbContext
                 FirstName = "Name",
                 LastName = "Lastname",
                 Email = "owner123@example.com",
-                Role = UserRole.Admin,
+                Role = UserRole.Owner,
                 PhoneNumber = "00000000000",
                 PersonalId = "555555555",
                 Age = 30
