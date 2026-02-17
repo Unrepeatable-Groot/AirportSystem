@@ -1,4 +1,5 @@
 ﻿using AirportSystem.Core.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace AirportSystem.Infrastructure.Persistence;
@@ -56,6 +57,23 @@ public class AppDbContext : DbContext
                   .WithOne(t => t.Passenger)
                   .HasForeignKey(t => t.PassengerId)
                   .OnDelete(DeleteBehavior.Restrict);
+
+
+            var passwordHasher = new PasswordHasher<Users>();
+            var adminUser = new Users
+            {
+                Id = 1,
+                FirstName = "Name",
+                LastName = "Lastname",
+                Email = "owner123@example.com",
+                Role = UserRole.Admin,
+                PhoneNumber = "00000000000",
+                PersonalId = "555555555",
+                Age = 30
+            };
+            adminUser.Password = passwordHasher.HashPassword(adminUser, "Owner123!");
+
+            entity.HasData(adminUser);
         });
     }
 
