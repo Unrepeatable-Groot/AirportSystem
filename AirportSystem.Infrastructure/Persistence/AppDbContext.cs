@@ -62,7 +62,7 @@ public class AppDbContext : DbContext
             var passwordHasher = new PasswordHasher<Users>();
             var adminUser = new Users
             {
-                Id = 2,
+                Id = 1,
                 FirstName = "George",
                 LastName = "Doe",
                 Email = "georgedoe123@gmail.com",
