@@ -4,13 +4,13 @@ namespace AirportSystem.Application.Interfaces;
 
 public interface IFlightsRepository
 {
-    Task<IEnumerable<Flights>> GetAllAsync();
+    Task<List<Flights>> GetAllAsync();
 
-    Task<IEnumerable<Flights>> GetByCountAsync(int count);
+    Task<List<Flights>> GetByCountAsync(int count);
 
-    Task<IEnumerable<Flights>> GetByRouteAsync(string? from, string? destination);
+    Task<List<Flights>> GetByRouteAsync(string? from, string? destination);
 
-    Task<IEnumerable<Flights>> GetAllWithTicketsAsync();
+    Task<List<Flights>> GetAllWithTicketsAsync();
 
     Task<Flights?> GetByIdAsync(int id);
 

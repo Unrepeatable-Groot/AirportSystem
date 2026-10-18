@@ -5,16 +5,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AirportSystem.API.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class UsersController : ControllerBase
-{
-    private readonly IUsersService _usersService;
-
-    public UsersController(IUsersService usersService)
+    [ApiController]
+    [Route("api/[controller]")]
+    public class UsersController : ControllerBase
     {
-        _usersService = usersService;
-    }
+        private readonly IUsersService _usersService;
+
+        public UsersController(IUsersService usersService)
+        {
+            _usersService = usersService;
+        }
 
 
     [HttpPost]
